@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Puzzle West Jacob</string>
+    <string name="puzzle_description">Puzzle Image</string>
+    <string name="start_button">Start Button</string>
+    <string name="welcome_text">Welcome to Jacob\'s Puzzle</string>
+    <string name="hurrah">Hurrah!!!</string>
+    <string name="completed_puzzle">You have completed the puzzle!</string>
+</resources>

@@ -1,0 +1,7 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Widget.Theme.PuzzleWestJacob.MyView" parent="" tools:keep="@style/Widget_Theme_PuzzleWestJacob_MyView">
+        <item name="android:background">@color/gray_600</item>
+        <item name="exampleColor">@color/light_blue_600</item>
+    </style>
+</resources>
