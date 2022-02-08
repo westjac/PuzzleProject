@@ -214,6 +214,8 @@ public class Puzzle {
 
         if(dragging != null) {
             if(dragging.maybeSnap()) {
+                pieces.remove(dragging);
+                pieces.add(0, dragging);
                 view.invalidate();
 
                 if(isDone()) {
