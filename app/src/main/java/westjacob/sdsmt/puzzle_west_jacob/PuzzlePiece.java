@@ -13,6 +13,22 @@ public class PuzzlePiece {
      */
     private Bitmap piece;
 
+    public float getX() {
+        return x;
+    }
+
+    public void setX(float x) {
+        this.x = x;
+    }
+
+    public float getY() {
+        return y;
+    }
+
+    public void setY(float y) {
+        this.y = y;
+    }
+
     /**
      * x location.
      * We use relative x locations in the range 0-1 for the center
@@ -41,9 +57,19 @@ public class PuzzlePiece {
      */
     final static float SNAP_DISTANCE = 0.05f;
 
+    public int getId() {
+        return id;
+    }
+
+    /**
+     * The puzzle piece ID
+     */
+    private int id;
+
     public PuzzlePiece(Context context, int id, float finalX, float finalY) {
         this.finalX = finalX;
         this.finalY = finalY;
+        this.id = id;
 
         piece = BitmapFactory.decodeResource(context.getResources(), id);
     }

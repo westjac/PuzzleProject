@@ -5,4 +5,5 @@
     <string name="welcome_text">Welcome to Jacob\'s Puzzle</string>
     <string name="hurrah">Hurrah!!!</string>
     <string name="completed_puzzle">You have completed the puzzle!</string>
+    <string name="shuffle">Shuffle Puzzle</string>
 </resources>
