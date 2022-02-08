@@ -5,6 +5,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 
+import java.util.Random;
+
 public class PuzzlePiece {
     /**
      * The image for the actual piece.
@@ -130,5 +132,14 @@ public class PuzzlePiece {
             return true;
         else
             return false;
+    }
+
+    /**
+     * Shuffle the location of this piece
+     * @param rand A random number generator
+     */
+    public void shuffle(Random rand) {
+        x = rand.nextFloat();
+        y = rand.nextFloat();
     }
 }

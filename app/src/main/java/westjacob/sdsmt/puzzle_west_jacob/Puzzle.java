@@ -11,6 +11,7 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 
 public class Puzzle {
@@ -75,6 +76,11 @@ public class Puzzle {
      */
     private float lastRelY;
 
+    /**
+     * Random number generator
+     */
+    private static Random random = new Random();
+
     public Puzzle(Context context) {
 
         // Create paint for filling the area the puzzle will
@@ -93,6 +99,7 @@ public class Puzzle {
         pieces.add(new PuzzlePiece(context, R.drawable.grubby5, 0.662f, 0.792f));
         pieces.add(new PuzzlePiece(context, R.drawable.grubby6, 0.254f, 0.818f));
 
+        shuffle();
     }
 
     public void draw(Canvas canvas) {
@@ -187,6 +194,9 @@ public class Puzzle {
                 dragging = pieces.get(p);
                 lastRelX = x;
                 lastRelY = y;
+
+                pieces.remove(p);
+                pieces.add(dragging);
                 return true;
             }
         }
@@ -240,5 +250,14 @@ public class Puzzle {
         }
 
         return true;
+    }
+
+    /**
+     * Shuffle the puzzle pieces
+     */
+    public void shuffle() {
+        for(PuzzlePiece piece : pieces) {
+            piece.shuffle(random);
+        }
     }
 }
